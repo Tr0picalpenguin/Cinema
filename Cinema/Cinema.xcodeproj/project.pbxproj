@@ -56,15 +56,31 @@
 		410B68E02828C6FB0097F322 /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
+				410B68F52828C7110097F322 /* Reasources */,
+				410B68F62828C7200097F322 /* Storyboards */,
+			);
+			path = Cinema;
+			sourceTree = "<group>";
+		};
+		410B68F52828C7110097F322 /* Reasources */ = {
+			isa = PBXGroup;
+			children = (
 				410B68E12828C6FB0097F322 /* AppDelegate.swift */,
 				410B68E32828C6FB0097F322 /* SceneDelegate.swift */,
 				410B68E52828C6FB0097F322 /* ViewController.swift */,
-				410B68E72828C6FB0097F322 /* Main.storyboard */,
 				410B68EA2828C6FD0097F322 /* Assets.xcassets */,
-				410B68EC2828C6FD0097F322 /* LaunchScreen.storyboard */,
 				410B68EF2828C6FD0097F322 /* Info.plist */,
 			);
-			path = Cinema;
+			path = Reasources;
+			sourceTree = "<group>";
+		};
+		410B68F62828C7200097F322 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				410B68E72828C6FB0097F322 /* Main.storyboard */,
+				410B68EC2828C6FD0097F322 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Cinema/Info.plist;
+				INFOPLIST_FILE = Cinema/Reasources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Cinema/Info.plist;
+				INFOPLIST_FILE = Cinema/Reasources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
