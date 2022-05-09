@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieDetailViewController" customModule="Cinema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Movie Title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3A-z2-god">
+                                <rect key="frame" x="41.5" y="84" width="331" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Rating)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO7-4t-0mf">
+                                <rect key="frame" x="273" y="131" width="99.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rw3-JB-Duy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-Ca-EM3">
+                                <rect key="frame" x="107" y="182" width="200" height="297.5"/>
+                                <color key="tintColor" red="0.1083266214" green="0.1083283797" blue="0.1385256946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RMC-Ca-EM3" secondAttribute="height" multiplier="2:3" id="apu-xq-GYd"/>
+                                    <constraint firstAttribute="width" constant="200" id="s3t-lf-088"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-2Y-51e">
+                                <rect key="frame" x="10" y="491" width="394" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EO7-4t-0mf" firstAttribute="trailing" secondItem="e3A-z2-god" secondAttribute="trailing" id="CFQ-K7-22y"/>
+                            <constraint firstItem="e3A-z2-god" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Lmc-a3-n3v"/>
+                            <constraint firstItem="dcJ-2Y-51e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PWm-Fg-wS5"/>
+                            <constraint firstItem="RMC-Ca-EM3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SdA-Cv-UNp"/>
+                            <constraint firstItem="dcJ-2Y-51e" firstAttribute="top" secondItem="RMC-Ca-EM3" secondAttribute="bottom" constant="10" id="bgi-3O-bmw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dcJ-2Y-51e" secondAttribute="bottom" constant="10" id="c7y-by-Z0W"/>
+                            <constraint firstItem="e3A-z2-god" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cER-uj-1yZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcJ-2Y-51e" secondAttribute="trailing" constant="10" id="i8r-jj-Alk"/>
+                            <constraint firstItem="EO7-4t-0mf" firstAttribute="top" secondItem="e3A-z2-god" secondAttribute="bottom" constant="10" id="jN1-o4-eCi"/>
+                            <constraint firstItem="RMC-Ca-EM3" firstAttribute="top" secondItem="EO7-4t-0mf" secondAttribute="bottom" constant="20" id="lRS-74-MPc"/>
+                            <constraint firstItem="EO7-4t-0mf" firstAttribute="width" secondItem="e3A-z2-god" secondAttribute="width" multiplier="0.3" id="qxo-fS-j2k"/>
+                            <constraint firstItem="e3A-z2-god" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="rd8-Bm-ksX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieNameLabel" destination="e3A-z2-god" id="Eqf-k1-vlF"/>
+                        <outlet property="moviePosterImageView" destination="RMC-Ca-EM3" id="efo-07-q4W"/>
+                        <outlet property="movieRatingLabel" destination="EO7-4t-0mf" id="6oO-iu-1aj"/>
+                        <outlet property="movieSynopsisTextView" destination="dcJ-2Y-51e" id="o1I-Y3-1EY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="79"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
