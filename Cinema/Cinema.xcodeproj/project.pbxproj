@@ -15,6 +15,7 @@
 		410B68FC2828C7F10097F322 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B68FB2828C7F10097F322 /* Movie.swift */; };
 		410B68FE2828C8B80097F322 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B68FD2828C8B80097F322 /* MovieController.swift */; };
 		410B69002828C95C0097F322 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B68FF2828C95C0097F322 /* MovieDetailViewController.swift */; };
+		4168E4B3282BFF5200F27B56 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4168E4B2282BFF5200F27B56 /* MovieListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		410B68FB2828C7F10097F322 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		410B68FD2828C8B80097F322 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		410B68FF2828C95C0097F322 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		4168E4B2282BFF5200F27B56 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				410B68FF2828C95C0097F322 /* MovieDetailViewController.swift */,
+				4168E4B2282BFF5200F27B56 /* MovieListTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4168E4B3282BFF5200F27B56 /* MovieListTableViewController.swift in Sources */,
 				410B68FE2828C8B80097F322 /* MovieController.swift in Sources */,
 				410B69002828C95C0097F322 /* MovieDetailViewController.swift in Sources */,
 				410B68E22828C6FB0097F322 /* AppDelegate.swift in Sources */,

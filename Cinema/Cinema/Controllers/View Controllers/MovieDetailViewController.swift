@@ -10,8 +10,7 @@ import UIKit
 class MovieDetailViewController: UIViewController {
 
     //MARK: Outlets
-    @IBOutlet weak var movieNameLabel: UILabel!
-    @IBOutlet weak var movieRatingLabel: UILabel!
+    
     @IBOutlet weak var moviePosterImageView: UIImageView!
     @IBOutlet weak var movieSynopsisTextView: UITextView!
     
@@ -22,12 +21,12 @@ class MovieDetailViewController: UIViewController {
     }
     
     func updateViews() {
-        let movie = MovieController.sharedInstance.movies[0]
-        let rating = movie.rating ?? 0
-        moviePosterImageView.image = movie.moviePoster
-        movieNameLabel.text = movie.name
-        movieRatingLabel.text = "\(rating)/10"
-        movieSynopsisTextView.text = movie.synopsis
+//        let movie = MovieController.sharedInstance.movies[0]
+//        let rating = movie.rating ?? 0
+//        moviePosterImageView.image = movie.moviePoster
+//        movieNameLabel.text = movie.name
+//        movieRatingLabel.text = "\(rating)/10"
+//        movieSynopsisTextView.text = movie.synopsis
         
     }
 }
