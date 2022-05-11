@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Movie List Table View Controller-->
         <scene sceneID="85F-bD-2o1">
             <objects>
-                <tableViewController id="XiK-b8-HcE" sceneMemberID="viewController">
+                <tableViewController id="XiK-b8-HcE" customClass="MovieListTableViewController" customModule="Cinema" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kF3-MA-XpL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="HoR-FS-owt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toDetailVC" id="HoR-FS-owt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,7 +51,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rFc-Ut-Kyv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j7B-R0-QyQ"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j7B-R0-QyQ">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="TFo-XA-ZqL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYm-Bo-0NB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,10 +121,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tb5-7f-3UR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cBj-td-q3w"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cBj-td-q3w">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="BYZ-38-t0r" id="nwk-Xa-6yp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="movieNameTextField" destination="tAH-Go-VUq" id="27a-e0-PJL"/>
                         <outlet property="moviePosterImageView" destination="RMC-Ca-EM3" id="efo-07-q4W"/>
+                        <outlet property="movieRatingTextField" destination="Cni-nu-SJQ" id="2h4-NX-cUK"/>
                         <outlet property="movieSynopsisTextView" destination="dcJ-2Y-51e" id="o1I-Y3-1EY"/>
                     </connections>
                 </viewController>
@@ -147,6 +157,9 @@
             <point key="canvasLocation" x="-676.81159420289862" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HoR-FS-owt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
